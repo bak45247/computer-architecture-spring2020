@@ -7,9 +7,11 @@
 struct Hangman
 {
     int length;
+    int numGuesses;
+    int score;
     Letter *word;
-    Letter *alphabet;
-}
+    Letter *guessed;
+};
 
 void printString(Hangman *game); // print the word, underscores if the letters have not yet been guessed
 Hangman *initializeHangman(int length, char *clue); // create hangman game

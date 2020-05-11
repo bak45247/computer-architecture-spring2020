@@ -4,8 +4,5 @@
 struct Letter
 {
     char character;
-    bool guessed;
-    bool included;
+    bool beenGuessed;
 };
-
-bool isIncluded();
