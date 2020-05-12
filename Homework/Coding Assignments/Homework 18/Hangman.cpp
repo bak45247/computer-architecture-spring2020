@@ -14,6 +14,14 @@ void printString(Hangman *game)
         else
             printf("_ ");
     }
+
+    printf("\nWrong Guesses: ");
+    for(int i = 0; i < game->wrongGuesses; i++)
+    {
+        printf("%c ", game->guessed[i].character);
+    }
+
+    printf("\nCurrent Score: %d\n", game->score);
 }
 
 Hangman *initializeHangman(int length, char *clue)
@@ -59,9 +67,9 @@ void findLetter(Hangman *game, char guess)
     if(included == false) // if we get here and this is false, the letter was NOT part of the word and the score is reduced by 1 point
     {
         game->score -= 1;
-        game->wrongGuesses += 1; // increment incorrect guesses
         game->guessed[game->wrongGuesses].character = guess; // place the new letter at this point in the array
         game->guessed[game->wrongGuesses].beenGuessed = true; // set this to true as it has been guessed
+        game->wrongGuesses += 1; // increment incorrect guesses
     }
 
     return;

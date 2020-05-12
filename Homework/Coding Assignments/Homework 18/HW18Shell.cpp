@@ -22,6 +22,7 @@ int main()
         }
         if (gameWon(h))
         {
+                printString(h);
                 printf("You won with score: %d\n", h->score);
         }
         else
