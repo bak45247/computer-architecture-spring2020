@@ -1,0 +1,3 @@
+3	Dog		4
+4	Swan	2
+10	Caterpillar	0

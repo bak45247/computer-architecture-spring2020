@@ -1,0 +1,3 @@
+Information: 3 Dog 4
+Information: 4 Swan 2
+Information: 10 Caterpillar 0
