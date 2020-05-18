@@ -9,7 +9,7 @@
 
 int main(int argc, char *argv[])
 {
-        // Homework 18 beginning
+        // Homework 18 beginning, creating the hangman game with an included word
         // char clue[5] = {'Q', 'U', 'E', 'U', 'E'};
         // Hangman *h = initializeHangman(5, clue);
 
@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
         scanf("%d", &numGames);
 
         int round = 1;
-        while(round <= numGames)
+        while(!round == numGames) // loops through rounds until its equal to the number of games wanted to be played
         {
                 int numWords = atoi(argv[1]);
                 FILE *input = fopen(argv[2], "r");
